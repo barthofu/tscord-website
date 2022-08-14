@@ -13,7 +13,7 @@ type HeroBannerProps = {
 
 export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
 
-    const iconSize = useBreakpointValue({ base: 64, md: 80, lg: 112 })
+    const iconSize = useBreakpointValue({ base: '6em', sm: '6em', md: '8em', lg: '10em' })
 
 	return (<>
 
@@ -78,7 +78,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
                     as="h2"
                     mb={6}
                     fontFamily='Dystopian'
-                    fontSize={{ base: "2xl", md: "4xl", lg: "7xl" }}
+                    fontSize={{ base: "5xl", md: "6xl", lg: "7xl" }}
                     lineHeight="95%"
                     textAlign="center"
                 >
@@ -88,9 +88,10 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
                 <Text
                     mb={12}
                     maxW="container.lg"
-                    color="gray.500"
+                    color="white.200"
+                    opacity='0.45'
                     fontSize={{ base: "lg", lg: "2xl" }}
-                    fontWeight="bolder"
+                    fontWeight="bold"
                     textAlign="center"
                     fontFamily='Inter var,Inter,sans-serif'
                     lineHeight={{ base: "125%", md: "115%" }}
@@ -99,7 +100,6 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
                 </Text>
 
                 <Link
-                    w={{ base: "full", sm: "unset" }}
                     p='20px'
                     bg='discord.500'
                     borderRadius='12px'
@@ -108,6 +108,9 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
                     _hover={{ bg: 'discord.600' }}
                     href={config.links.discordInvite}
                     target="_blank"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                 >
                     <Text fontFamily='Inter var,Inter,sans-serif' fontWeight='bold' color='white'>Add to Discord</Text>
                 </Link>

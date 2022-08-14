@@ -34,7 +34,7 @@ const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
             </Link>
 
             <Box 
-                w='60vw' 
+                w={{ base: '90vw', lg: '60vw' }} 
                 bg='gray.700'
                 borderRadius='2xl'
                 overflow='hidden'
@@ -54,12 +54,12 @@ const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
                     </Image>
                 }
 
-                <Box p='2em 4em 4em 4em'>
+                <Box p={{ base: '2em', lg: '2em 4em 4em 4em' }}>
 
-                    <Text as='h1' fontSize='5xl' fontWeight='bold'>
+                    <Text as='h1' fontSize={{ base: '3xl', lg: '5xl' }} fontWeight='bold'>
                         {article.title}
                     </Text>
-                    <Text as='h3' fontSize='lg' fontWeight='regular' mb='2em' opacity='.7' fontStyle='italic'>
+                    <Text as='h3' fontSize={{ base: 'md', lg: 'lg' }} fontWeight='regular' mb='2em' opacity='.7' fontStyle='italic'>
                         By {article.authorUrl ? 
                                 <Text as='a' 
                                     href={article.authorUrl} 

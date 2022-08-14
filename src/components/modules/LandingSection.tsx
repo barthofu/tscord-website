@@ -71,8 +71,8 @@ export const LandingSection: React.FC<LandingSectionProps> = ({ title, image, al
                             justifySelf="center"
                         >
                             <ImageResolver image={<>
-                                <Flex>
-                                    <Box ml="auto" width={{ base: "80%", md: "full" }} position="relative">
+                                <Flex justifyContent='center'>
+                                    <Box ml={{ md: 'unset', lg: 'auto' }} width={{ base: "80%", md: "full" }} position="relative">
                                         <Img
                                             w="full"
                                             minW="full"

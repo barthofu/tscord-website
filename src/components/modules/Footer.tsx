@@ -11,7 +11,7 @@ const LogoText: React.FC<{ children: React.ReactNode } & Rest> = ({ children, ..
 
     return <Text
         as='h3'
-        fontSize='4xl'
+        fontSize={{ sm: 'xl', base: '2xl', lg: '4xl'}}
         fontWeight='bolder'
         fontFamily='Archivo Black, sans-serif'
         color='white'
@@ -56,9 +56,19 @@ export const Footer: React.FC<FooterProps> = () => {
                 pt={{ base: 16, lg: 28 }}
                 pb={{ base: 48, lg: 64 }}
             >
-                <HStack justifyContent='space-around' alignItems='center' h='full'>
+                <Stack 
+                    direction={{ base: "column", md: "row" }}
+                    justifyContent='space-around' 
+                    alignItems='center' 
+                    h='full'
+                >
 
-                    <VStack flexDirection='column-reverse' alignItems='start' textShadow='dark-lg'>
+                    <VStack 
+                        flexDirection='column-reverse' 
+                        alignItems='start' 
+                        textShadow='dark-lg'
+                        mb={{ base: '3em', md: 'unset' }}    
+                    >
                         <LogoText color='gray.800' textShadow={getTextStroke(.5)} opacity='0.25'>Slash Commands</LogoText>
                         <LogoText color='gray.800' textShadow={getTextStroke(.5)} opacity='0.5'>Slash Commands</LogoText>
                         <LogoText color='gray.800' textShadow={getTextStroke(.5)} opacity='0.75'>Slash Commands</LogoText>
@@ -81,7 +91,7 @@ export const Footer: React.FC<FooterProps> = () => {
                             </FooterLink>
                         ))}
                     </Stack>
-                </HStack>
+                </Stack>
             </Container>
         </Box>
     </>)

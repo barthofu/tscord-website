@@ -18,7 +18,7 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 
 	return (<>
 		<VStack 
-			spacing='10em'
+			spacing={{ base: '4em', lg: '10em' }}
 			direction="column"
 			justifyContent="center"
 			alignItems="center"
@@ -57,7 +57,7 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 				text='Bring your community to your favourite communication platforms, management tools or games.'
 			/>
 
-			<Box>
+			<Box p='2em'>
 
 				<Flex justifyContent="center" alignItems="center" mb='5em'>
 					<Heading display='flex' alignItems='center' fontFamily='Dystopian' as="h2" size="2xl" mx='1em'>
@@ -65,7 +65,7 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 					</Heading>
 				</Flex>
 
-				<SimpleGrid columns={3} gap={{ base: 6, lg: 20 }}>
+				<SimpleGrid columns={{ base: 1, lg: 3 }} gap={{ base: 6, lg: 20 }}>
 
 					<HomeStat
 						label='Guilds'
@@ -91,7 +91,7 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 				</SimpleGrid>
 			</Box>
 
-			<Box>
+			<Box p='2em'>
 
 				<Flex justifyContent="center" alignItems="center" mb='5em !important'>
 					<Heading display='flex' alignItems='center' fontFamily='Dystopian' as="h2" size="2xl" mx='1em'>
@@ -105,10 +105,10 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 
 			{articles.length > 0 &&
 			
-				<Box>
+				<Box p='2em'>
 
 					<Flex justifyContent="center" alignItems="center" mb='5em !important'>
-						<Heading display='flex' alignItems='center' fontFamily='Dystopian' as="h2" size="2xl" mx='1em'>
+						<Heading display='flex' alignItems='center' fontFamily='Dystopian' as="h2" size="2xl" mx='1em' textAlign='center'>
 							Discover latest news
 						</Heading>
 					</Flex>
