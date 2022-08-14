@@ -32,9 +32,9 @@ export const LatestArticles: React.FC<LatestArticlesProps> = ({ articles }) => {
                     breakInside: "avoid",
                 }}
             >
-                {articles.map((article, i) => (<>
-                    <ArticlePreview key={i} article={article} />
-                </>))}
+                {articles.map((article, i) => (<Box key={i}>
+                    <ArticlePreview article={article} />
+                </Box>))}
                 
             </PopBox>
 

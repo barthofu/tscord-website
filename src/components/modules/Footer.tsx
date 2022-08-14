@@ -1,4 +1,5 @@
 import { Box, Container, HStack, Link, Stack, Text, VStack} from '@chakra-ui/react'
+import config from '@config'
 import React from 'react'
 
 const getTextStroke = (px: number = 1) => {
@@ -70,12 +71,15 @@ export const Footer: React.FC<FooterProps> = () => {
                         alignItems="center"
                         justifyContent={{ base: "center", md: "end" }}
                     >
-                        <FooterLink href='https://github.com/barthofu/tscord-template' isExternal>
-                            github
-                        </FooterLink>
-                        <FooterLink href='' isExternal>
-                            support server
-                        </FooterLink>
+                        {config.links.footer.map((link, i) => (
+                            <FooterLink 
+                                href={link.url} 
+                                isExternal={link.url.startsWith('http')}
+                                key={i}
+                            >
+                                {link.name}
+                            </FooterLink>
+                        ))}
                     </Stack>
                 </HStack>
             </Container>

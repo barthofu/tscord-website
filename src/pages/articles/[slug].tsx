@@ -8,7 +8,7 @@ import { AiFillHome } from "react-icons/ai"
 import Link from "next/link"
 import fs from 'fs'
 
-import { articlesConfig } from "@configs/articles"
+import config from "@config"
 import matter from "gray-matter"
 
 type ArticlePageProps = {
@@ -93,7 +93,7 @@ export const getStaticProps: GetStaticProps = async ({ params })=> {
     const { slug } = params!
     if (!slug) throw new Error('Bad parameters: no \'slug\'')
 
-    const filePath = `${articlesConfig.path}/${slug}`
+    const filePath = `${config.articlesPath}/${slug}`
     let fileContent: string
     try {
         fileContent = fs.readFileSync(filePath + '.md', 'utf8')
@@ -123,7 +123,7 @@ export const getStaticProps: GetStaticProps = async ({ params })=> {
 
 export const getStaticPaths: GetStaticPaths = async () => {
 
-    const files = fs.readdirSync(articlesConfig.path).filter(file => !file.startsWith('.') || !file.startsWith('_'))
+    const files = fs.readdirSync(config.articlesPath).filter(file => !file.startsWith('.') || !file.startsWith('_'))
     const slugs = files.map((fileName: string) => fileName.replace(/\.mdx?$/, ''))
 
     const paths = slugs.map(slug => ({

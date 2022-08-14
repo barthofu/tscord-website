@@ -7,7 +7,7 @@ import matter from 'gray-matter'
 import fs from 'fs'
 
 import { HeroBanner, HomeStat, LandingSection, Commands, LatestArticles, Footer } from '@components/modules'
-import { articlesConfig } from '@configs/articles'
+import config from '@config'
 
 type Props = {
 	botData: BotData
@@ -156,13 +156,13 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 		}))
 	}
 
-	const files = fs.readdirSync(articlesConfig.path).filter(file => !file.startsWith('.') || !file.startsWith('_'))
+	const files = fs.readdirSync(config.articlesPath).filter(file => !file.startsWith('.') || !file.startsWith('_'))
 
 	const articles = files.map((fileName: string) => {
 
 		const slug = fileName.replace(/\.mdx?$/, '')
 
-		const filePath = `${articlesConfig.path}/${fileName}`
+		const filePath = `${config.articlesPath}/${fileName}`
 		const fileContents = fs.readFileSync(filePath, 'utf8')
 		const { data, content } = matter(fileContents)
 

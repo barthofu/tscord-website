@@ -1,5 +1,5 @@
 import { Flex, Text, Heading, Image, useBreakpointValue, Box, Button, Link } from '@chakra-ui/react'
-import { discordConfig } from '@configs/discord'
+import config from '@config'
 import React from 'react'
 
 import { Parallax } from 'react-scroll-parallax'
@@ -106,7 +106,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
                     size={useBreakpointValue({ base: "md", md: "xl", xl: "2xl" })}
                     fontWeight="bold"
                     _hover={{ bg: 'discord.600' }}
-                    href={discordConfig.inviteLink}
+                    href={config.links.discordInvite}
                     target="_blank"
                 >
                     <Text fontFamily='Inter var,Inter,sans-serif' fontWeight='bold' color='white'>Add to Discord</Text>

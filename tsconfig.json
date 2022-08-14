@@ -20,7 +20,7 @@
 
 			"@components/*": ["src/components/*"],
 			
-			"@configs/*": ["src/core/configs/*"],
+			"@config": ["config.ts"],
 			"@core/*": ["src/core/*"],
 			"@utils/*": ["src/core/utils/*"],
 			"@styles/*": ["public/styles/*"],
