@@ -99,9 +99,8 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 					</Heading>
 				</Flex>
 
-				<Commands 
-					commands={botData.commands}
-				/>
+				<Commands commands={botData.commands}/>
+
 			</Box>
 
 			{articles.length > 0 &&
@@ -114,9 +113,8 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 						</Heading>
 					</Flex>
 
-					<LatestArticles
-						articles={articles}
-					/>
+					<LatestArticles articles={articles} />
+
 				</Box>
 			}
 
