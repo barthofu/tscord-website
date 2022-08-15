@@ -12,3 +12,7 @@ type ArticleData = ArticleMetaData & {
     fileName?: string
     content: string
 }
+
+type SanitizedArticleData = ArticleMetaData & {
+    slug: string
+}

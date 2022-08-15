@@ -12,7 +12,7 @@ import config from '@config'
 
 type Props = {
 	botData: BotData
-	articles: ArticleData[]
+	articles: SanitizedArticleData[]
 }
 
 const HomePage: NextPage<Props> = ({ botData, articles }) => {
@@ -177,14 +177,12 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 		const filePath = `${config.articlesPath}/${fileName}`
 		const fileContents = fs.readFileSync(filePath, 'utf8')
-		const { data, content } = matter(fileContents)
+		const { data } = matter(fileContents)
 
 		const article = {
 			slug,
-			fileName,
-			content,
 			...data
-		} as ArticleData
+		} as SanitizedArticleData
 
 		return article
 	})

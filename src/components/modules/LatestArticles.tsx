@@ -9,7 +9,7 @@ import { Card, PopBox } from '@components/shared'
 const MotionBox = motion(Box)
 
 type LatestArticlesProps = {
-    articles: ArticleData[]
+    articles: SanitizedArticleData[]
 }
 
 export const LatestArticles: React.FC<LatestArticlesProps> = ({ articles }) => {
@@ -63,7 +63,7 @@ export const LatestArticles: React.FC<LatestArticlesProps> = ({ articles }) => {
 }
 
 type ArticlePreviewProps = {
-    article: ArticleData
+    article: SanitizedArticleData
 }
 
 export const ArticlePreview: React.FC<ArticlePreviewProps> = ({ article }) => {
