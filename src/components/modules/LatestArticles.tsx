@@ -41,7 +41,7 @@ export const LatestArticles: React.FC<LatestArticlesProps> = ({ articles }) => {
             <MotionBox
                 position="absolute"
                 inset={-1}
-                bgGradient="linear-gradient(to top, var(--chakra-colors-gray-800), rgba(39, 39, 42, 0))"
+                bgGradient="linear-gradient(to top, var(--chakra-colors-secondary), rgba(39, 39, 42, 0))"
                 zIndex="1"
                 pointerEvents="none"
                 initial={{ opacity: 0 }}
@@ -52,6 +52,7 @@ export const LatestArticles: React.FC<LatestArticlesProps> = ({ articles }) => {
 
         <Flex alignItems="center" justifyContent="center" mt='5em' z-index='1'>
             <Button
+                bg='primary'
                 mb={8}
                 onClick={() => setExpanded(!expanded)}
                 rightIcon={expanded ? <IoIosArrowUp /> : <IoIosArrowDown />}
@@ -82,8 +83,8 @@ export const ArticlePreview: React.FC<ArticlePreviewProps> = ({ article }) => {
                 role="group"
                 my={{ base: 2, md: 3, lg: 4 }}
                 w="full"
-                transition='background 0.2s linear'
-                _hover={{ bg: useColorModeValue('gray.100', 'gray.900'), transition: 'background 0.5s linear' }}
+                transition='0.25s linear'
+                _hover={{ bg: 'tertiary', transform: 'scale(0.98)' }}
                 display='inline-flex'
                 flexDirection='column'
                 justifyContent='start'
@@ -91,14 +92,13 @@ export const ArticlePreview: React.FC<ArticlePreviewProps> = ({ article }) => {
                 p={0}
                 borderRadius='2xl'
                 overflow="hidden"
-                bg='#29292C'
+                bg='primary'
             >
                 {article.coverUrl && (
                     <Image
                         w="full"
                         src={article.coverUrl}
                         alt={article.title}
-                        _groupHover={{ opacity: 0.8 }}
                         borderTopLeftRadius="2xl"
                         borderTopRightRadius="2xl"
                     />

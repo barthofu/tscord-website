@@ -38,7 +38,7 @@ export const HomeStat: React.FC<HomeStatProps> = ({ label, value, icon, color })
 	return (<>
         <PopBox>
             <Card
-                bg='#29292C'
+                bg='primary'
                 position="relative"
                 px={{ base: 5, sm: 6 }}
                 py={7}

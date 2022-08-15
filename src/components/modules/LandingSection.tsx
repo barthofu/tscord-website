@@ -15,7 +15,7 @@ type LandingSectionProps = {
 export const LandingSection: React.FC<LandingSectionProps> = ({ title, image, alt, isImgFirst, text, children }) => {
 
 	return (<>
-        <Box as="section" bgColor="gray.800" zIndex="banner">
+        <Box as="section" zIndex="banner">
             <Container position="relative" maxW="container.lg" px={{ base: 8, md: 12 }}>
                 <PopBox>
                     <SimpleGrid

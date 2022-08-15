@@ -48,7 +48,6 @@ export const Footer: React.FC<FooterProps> = () => {
             bgSize="auto 8rem"
             bgRepeat="repeat-x"
             bgPosition="bottom center"
-            bgColor="gray.800"
         >
             <Container
                 maxW="container.lg"

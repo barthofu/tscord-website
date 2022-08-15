@@ -48,7 +48,7 @@ const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
 
             <Box 
                 w={{ base: '90vw', lg: '60vw' }} 
-                bg='#29292C'
+                bg='primary'
                 borderRadius='2xl'
                 overflow='hidden'
             >

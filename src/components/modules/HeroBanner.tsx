@@ -43,7 +43,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, title, descript
                 speed={parallaxSpeed}
                 position="absolute"
                 inset={0}
-                bgGradient="linear-gradient(to top, var(--chakra-colors-gray-800), transparent)"
+                bgGradient="linear-gradient(to top, var(--chakra-colors-secondary), transparent)"
                 
             />
 

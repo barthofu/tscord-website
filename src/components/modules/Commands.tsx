@@ -41,7 +41,12 @@ const CommandRow: React.FC<{ command: any, index: number }> = ({ command, index 
             ref={viewRef}
         >
             <Td>
-                <Code p='.25em .4em' borderRadius='8px' fontSize='1.2em' bg='#3f3f3f'>
+                <Code 
+                    p='.25em .4em' 
+                    borderRadius='8px' 
+                    fontSize='1.2em' 
+                    bg='tertiary'
+                >
                     /{command.name}
                 </Code>
             </Td>
@@ -60,7 +65,7 @@ export const Commands: React.FC<CommandsProps> = ({ commands }) => {
         <Box 
             maxW='95vw' 
             m='50px auto' 
-            bg='#29292C'
+            bg='primary'
             borderRadius='8px' 
             boxShadow="var(--chakra-shadows-xl)"
         >

@@ -5,7 +5,7 @@ const styles = {
     global: (props: any) => ({
 
         body: {
-            bg: mode("secondaryGray.300", "gray.800")(props),
+            bg: 'secondary',
             fontFamily: "DM Sans",
         },
         html: {
@@ -19,7 +19,7 @@ const styles = {
         },
         '::-webkit-scrollbar-thumb': {
             borderRadius: '10px',
-            background: mode('gray.300', 'gray.600')(props),
+            background: 'gray.600',
         },
         '::-webkit-scrollbar-track': {
             background: 'rgba(0, 0, 0, 0)'
