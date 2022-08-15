@@ -49,25 +49,25 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 			/>
 
 			<LandingSection
-				title='Platform-agnostic communities'
-				image='https://guild.xyz/landing/platform-agnostic-communities.png'
+				title='Your feature #1'
+				image='https://i.imgur.com/LjoutQ7.png'
 				alt='Test'
-				text='Bring your community to your favourite communication platforms, management tools or games.'
+				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 			/>
 
 			<LandingSection
-				title='Platform-agnostic communities'
-				image='https://guild.xyz/landing/platform-agnostic-communities.png'
+				title='Your feature #2'
+				image='https://i.imgur.com/LjoutQ7.png'
 				alt='Test'
-				text='Bring your community to your favourite communication platforms, management tools or games.'
+				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 				isImgFirst={true}
 			/>
 
 			<LandingSection
-				title='Platform-agnostic communities'
-				image='https://guild.xyz/landing/platform-agnostic-communities.png'
+				title='Your feature #3'
+				image='https://i.imgur.com/LjoutQ7.png'
 				alt='Test'
-				text='Bring your community to your favourite communication platforms, management tools or games.'
+				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 			/>
 
 			<Box p='2em'>

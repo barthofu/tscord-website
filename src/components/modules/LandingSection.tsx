@@ -10,10 +10,9 @@ type LandingSectionProps = {
     isImgFirst?: boolean
     text?: string
     children?: React.ReactNode
-    rest?: Rest
 }
 
-export const LandingSection: React.FC<LandingSectionProps> = ({ title, image, alt, isImgFirst, text, children, ...rest }) => {
+export const LandingSection: React.FC<LandingSectionProps> = ({ title, image, alt, isImgFirst, text, children }) => {
 
 	return (<>
         <Box as="section" bgColor="gray.800" zIndex="banner">
@@ -51,7 +50,8 @@ export const LandingSection: React.FC<LandingSectionProps> = ({ title, image, al
                                     <Text
                                         fontSize={{ base: "lg", lg: "xl" }}
                                         fontWeight="semibold"
-                                        color='gray.400'
+                                        color='white.200'
+                                        opacity='0.6'
                                         lineHeight="125%"
                                         w="full"
                                     >
@@ -78,6 +78,8 @@ export const LandingSection: React.FC<LandingSectionProps> = ({ title, image, al
                                             minW="full"
                                             src={image}
                                             alt="Platform-agnostic communities"
+                                            borderRadius='12px'
+                                            boxShadow='var(--chakra-shadows-xl)'
                                         />
                                     </Box>
                                 </Flex>

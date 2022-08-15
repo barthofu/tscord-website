@@ -2,8 +2,8 @@ const config: Config = {
 
     site: {
         title: null, // if set to null, username of the bot will be used
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tincidunt urna, ut vulputate tortor sollicitudin eu.',
         icon: null, // if set to null, icon of the bot will be used
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tincidunt urna, ut vulputate tortor sollicitudin eu.',
     },
 
     links: {
@@ -12,8 +12,8 @@ const config: Config = {
 
         footer: [
 
-            { name: 'github', url: '' },
-            { name: 'support', url: '' },
+            { name: 'github', url: 'https://github.com/barthofu/tscord' },
+            { name: 'support', url: 'https://discord.gg/8P7jFpbKkb' },
         ]
     },
 

@@ -48,7 +48,7 @@ const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
 
             <Box 
                 w={{ base: '90vw', lg: '60vw' }} 
-                bg='gray.700'
+                bg='#29292C'
                 borderRadius='2xl'
                 overflow='hidden'
             >
@@ -59,6 +59,7 @@ const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
                         width='100%'
                         maxH='300px'
                         objectFit='cover'
+                        objectPosition='0 -20px'
                         sx={{
                             maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
                         }}
