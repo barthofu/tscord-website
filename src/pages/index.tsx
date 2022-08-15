@@ -5,6 +5,7 @@ import { FaUserFriends } from 'react-icons/fa'
 import { SiClubhouse } from 'react-icons/si'
 import matter from 'gray-matter'
 import fs from 'fs'
+import Head from 'next/head'
 
 import { HeroBanner, HomeStat, LandingSection, Commands, LatestArticles, Footer } from '@components/modules'
 import config from '@config'
@@ -15,8 +16,19 @@ type Props = {
 }
 
 const HomePage: NextPage<Props> = ({ botData, articles }) => {
+	
+	const title = config.site.title || botData.info.name
 
 	return (<>
+		<Head>
+			<title>{title}</title>
+			<meta
+				name="description"
+				content={config.site.description}
+			/>
+			<link rel="icon" type="image/png" href={config.site.icon || botData.info.iconUrl} />
+		</Head>
+
 		<VStack 
 			spacing={{ base: '4em', lg: '10em' }}
 			direction="column"
@@ -31,8 +43,9 @@ const HomePage: NextPage<Props> = ({ botData, articles }) => {
 			}}
 		>
 			<HeroBanner
-				name={botData.info.name}
+				title={title}
 				iconUrl={botData.info.iconUrl}
+				description={config.site.description}
 			/>
 
 			<LandingSection

@@ -10,6 +10,9 @@ import fs from 'fs'
 
 import config from "@config"
 import matter from "gray-matter"
+import Head from "next/head"
+
+const defaultArticlePageIcon = 'https://cdn-icons-png.flaticon.com/512/3500/3500995.png'
 
 type ArticlePageProps = {
     article: ArticleData
@@ -18,6 +21,16 @@ type ArticlePageProps = {
 const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
 
     return (<>
+
+        <Head>
+			<title>{article.title}</title>
+            {article.description && <meta
+				name="description"
+				content={article.description}
+			/>}
+			<link rel="icon" type="image/png" href={config.site.icon || defaultArticlePageIcon} />
+		</Head>
+
         <Flex w='full' flexDirection='column' alignItems='center' justifyContent='center' py='5em'>
 
             <Link href='/'>

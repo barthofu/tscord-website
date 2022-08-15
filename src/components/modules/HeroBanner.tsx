@@ -8,10 +8,11 @@ const parallaxSpeed = -30
 
 type HeroBannerProps = {
     iconUrl: string
-    name: string
+    title: string
+    description: string
 }
 
-export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
+export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, title, description }) => {
 
     const iconSize = useBreakpointValue({ base: '6em', sm: '6em', md: '8em', lg: '10em' })
 
@@ -68,7 +69,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
 
                 <Image
                     src={iconUrl}
-                    alt={name}
+                    alt={title + ' logo'}
                     w={iconSize} h={iconSize}
                     borderRadius='50%'
                     mb='24px'
@@ -82,7 +83,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
                     lineHeight="95%"
                     textAlign="center"
                 >
-                    {name}
+                    {title}
                 </Heading>
 
                 <Text
@@ -96,7 +97,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, name }) => {
                     fontFamily='Inter var,Inter,sans-serif'
                     lineHeight={{ base: "125%", md: "115%" }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tincidunt urna, ut vulputate tortor sollicitudin eu.
+                    {description}
                 </Text>
 
                 <Link
