@@ -1,10 +1,10 @@
-import { Flex, Text, Heading, Image, useBreakpointValue, Box, Button, Link } from '@chakra-ui/react'
+import { Flex, Text, Heading, Image, useBreakpointValue, Box, Link } from '@chakra-ui/react'
 import config from '@config'
 import React from 'react'
 
 import { Parallax } from 'react-scroll-parallax'
 
-const parallaxSpeed = -30
+const parallaxSpeed = -40
 
 type HeroBannerProps = {
     iconUrl: string
@@ -28,14 +28,12 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ iconUrl, title, descript
             <Box
                 as={Parallax}
                 speed={parallaxSpeed}
-                bgImage='/assets/images/homePageBackground.svg'
-                // bgAttachment='fixed'
+                bgImage='/assets/images/heroBackground.svg'
                 position="absolute"
                 inset={0}
-                bgSize={{ base: "cover", lg: "calc(100% - 2.25rem) auto" }}
-                bgRepeat="no-repeat"
+                bgSize='30em'
                 bgPosition="top 1.75rem center"
-                opacity={0.04}
+                opacity={0.125}
                 zIndex={-1}
                 w='100%'
             />
