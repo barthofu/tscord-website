@@ -4,6 +4,21 @@
 
 This [Next.js](https://nextjs.org/) full static website is meant to be used with a bot created from the [tscord bot template](https://github.com/barthofu/tscord).
 
+## Features
+
+- "Add to Discord" button
+- Stats of the bot (such as total users, guilds, etc)
+- List of commands
+- Markdown articles
+- Responsive
+- Animations
+- Full static
+- *...and many more!* 
+
+## Preview
+
+https://user-images.githubusercontent.com/66025667/184621486-7340157f-b7fc-44ea-94a9-03d76a99384c.mp4
+
 ## Usage
 
 1. Click on the **use this template** button
@@ -23,7 +38,3 @@ But the main downside is the need of a next.js server instance to be running 24/
     In this solution, and as a contrast with the other, the main downside is that you'll have to re-build and re-deploythe website each time your data (list of commands, articles, etc) change. 
     You can still resolve this by automating all of this with a well configured CI/CD ecosystem (e.g: Github Actions, cron jobs on your server or on your bot, etc). 
     It will take you more effort for sure, but will result in the best of the two solutions!
-
-## Screenshots
-
-![](https://i.imgur.com/fpIcsu1.gif)
