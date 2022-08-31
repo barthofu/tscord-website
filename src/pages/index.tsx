@@ -9,6 +9,7 @@ import Head from 'next/head'
 
 import { HeroBanner, HomeStat, LandingSection, Commands, LatestArticles, Footer } from '@components/modules'
 import config from '@config'
+import { sanitizeCommands } from '@core/utils'
 
 type Props = {
 	botData: BotData
@@ -163,10 +164,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 			iconUrl: info.user.displayAvatarURL
 		},
 		totals: totals,
-		commands: commands.map((c: any) => ({
-			name: c.name,
-			description: c.description
-		}))
+		commands: sanitizeCommands(commands)
 	}
 
 	const files = fs.readdirSync(config.articlesPath).filter(file => !file.startsWith('.') || !file.startsWith('_'))
