@@ -145,7 +145,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 	const apiUrl = process.env['API_URL']
   	const apiToken = process.env['API_TOKEN']
 
-	const infoRes = await fetch(new URL('/bot/info?logIgnore=true', apiUrl), { headers: { Authorization: `Bearer ${apiToken}` } })
+	const infoRes = await fetch(new URL('/bot/info?logIgnore=true', apiUrl), { headers: { 'Authorization': `Bearer ${apiToken}` } })
 	if (!infoRes.ok) throw new Error(infoRes.statusText)
 	const info = await infoRes.json()
 
