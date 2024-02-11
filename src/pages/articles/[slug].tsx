@@ -88,6 +88,7 @@ const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
                     </Text>
 
                     <ReactMarkdown 
+                        // @ts-ignore
                         rehypePlugins={[rehypeRaw]}
                         remarkPlugins={[remarkGfm]}
                         components={ChakraUIRenderer()}

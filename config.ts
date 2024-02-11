@@ -13,7 +13,7 @@ const config: Config = {
         footer: [
 
             { name: 'github', url: 'https://github.com/barthofu/tscord' },
-            { name: 'support', url: 'https://discord.gg/8P7jFpbKkb' },
+            { name: 'support', url: 'https://discord.gg/Q4w4UEWaDY' },
         ]
     },
 
